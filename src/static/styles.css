@@ -303,13 +303,13 @@ section h3 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.twitter-share {
-  color: #1DA1F2;
-  border-color: #1DA1F2;
+.x-share {
+  color: #000000;
+  border-color: #000000;
 }
 
-.twitter-share:hover {
-  background-color: #1DA1F2;
+.x-share:hover {
+  background-color: #000000;
   color: white;
 }
 

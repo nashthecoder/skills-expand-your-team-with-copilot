@@ -522,7 +522,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Create share URLs
     const pageUrl = encodeURIComponent(window.location.origin);
     const shareText = encodeURIComponent(`Check out ${name} at Mergington High School! ${details.description}`);
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${shareText}&url=${pageUrl}`;
+    const xUrl = `https://x.com/intent/post?text=${shareText}&url=${pageUrl}`;
     const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
     const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
 
@@ -530,11 +530,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const socialShareButtons = `
       <div class="social-share-buttons">
         <span class="share-label">Share:</span>
-        <a href="${twitterUrl}" target="_blank" rel="noopener noreferrer" class="share-button twitter-share tooltip" aria-label="Share on Twitter">
+        <a href="${xUrl}" target="_blank" rel="noopener noreferrer" class="share-button x-share tooltip" aria-label="Share on X">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
           </svg>
-          <span class="tooltip-text">Share on Twitter</span>
+          <span class="tooltip-text">Share on X</span>
         </a>
         <a href="${facebookUrl}" target="_blank" rel="noopener noreferrer" class="share-button facebook-share tooltip" aria-label="Share on Facebook">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
