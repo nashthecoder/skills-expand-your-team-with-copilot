@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Dark mode elements
   const darkModeToggle = document.getElementById("dark-mode-toggle");
-  const toggleIcon = darkModeToggle.querySelector(".toggle-icon");
+  const toggleIcon = darkModeToggle ? darkModeToggle.querySelector(".toggle-icon") : null;
   const toggleText = document.getElementById("toggle-text");
 
   // Search and filter elements
@@ -44,15 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function enableDarkMode() {
     document.body.classList.add("dark-mode");
-    toggleIcon.textContent = "☀️";
-    toggleText.textContent = "Light";
+    if (toggleIcon) toggleIcon.textContent = "☀️";
+    if (toggleText) toggleText.textContent = "Light";
     localStorage.setItem("theme", "dark");
   }
 
   function disableDarkMode() {
     document.body.classList.remove("dark-mode");
-    toggleIcon.textContent = "🌙";
-    toggleText.textContent = "Dark";
+    if (toggleIcon) toggleIcon.textContent = "🌙";
+    if (toggleText) toggleText.textContent = "Dark";
     localStorage.setItem("theme", "light");
   }
 
@@ -65,7 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Event listener for dark mode toggle
-  darkModeToggle.addEventListener("click", toggleDarkMode);
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", toggleDarkMode);
+  }
 
   // Activity categories with corresponding colors
   const activityTypes = {
