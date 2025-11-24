@@ -606,7 +606,6 @@ footer {
 .day-filter:hover,
 .time-filter:hover,
 .difficulty-filter:hover {
-.time-filter:hover {
   background-color: var(--primary-light);
   color: white;
 }
