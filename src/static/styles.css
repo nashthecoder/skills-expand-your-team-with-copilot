@@ -30,6 +30,10 @@
   --error-light: #ffebee;
   --info: #0c5460;
   --info-light: #d1ecf1;
+
+  /* Tooltip colors - inverted for contrast */
+  --tooltip-bg: rgba(33, 33, 33, 0.9);
+  --tooltip-text: #ffffff;
 }
 
 /* Dark mode color palette */
@@ -64,6 +68,10 @@ body.dark-mode {
   --error-light: #2a2a2a;
   --info: #29b6f6;
   --info-light: #2a2a2a;
+
+  /* Tooltip colors - inverted for contrast */
+  --tooltip-bg: rgba(230, 230, 230, 0.95);
+  --tooltip-text: #121212;
 }
 
 * {
@@ -341,8 +349,8 @@ button {
 
 .tooltip .tooltip-text {
   visibility: hidden;
-  background-color: rgba(33, 33, 33, 0.9);
-  color: #fff;
+  background-color: var(--tooltip-bg);
+  color: var(--tooltip-text);
   text-align: center;
   padding: 8px 12px;
   border-radius: 4px;
@@ -358,12 +366,6 @@ button {
   max-width: 250px;
   pointer-events: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Dark mode tooltip adjustment */
-body.dark-mode .tooltip .tooltip-text {
-  background-color: rgba(230, 230, 230, 0.95);
-  color: #121212;
 }
 
 .tooltip:hover .tooltip-text {
